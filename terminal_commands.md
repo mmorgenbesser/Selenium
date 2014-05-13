@@ -1,11 +1,11 @@
-### Terminal Commands
+## Terminal Commands
 ======================
 
-##### Specify Browser
+#### Specify Browser
 
 `browser='chrome' rspec -r ./config.rb`
 
-##### Don't specify browser
+Don't specify browser
 
 `rspec --require ./config.rb`
 
@@ -13,24 +13,24 @@ Use -r in place of require
 
 `rspec --r ./config.rb`
 
-#### Include tag by type
+### Include tag by type
 Ex: `:type => 'special`
 
 `rspec . --tag type:special --r ./config.rb`
 
-#### Run parallel tests (2)
+### Run parallel tests (2 by default)
 
 `parallel_rspec --test-options 'r ./config.rb' spec`
 
-##### Increase number of parallel tests
+Increase number of parallel tests
 
 `parallel_rspec -n 5`
 
-#### Order random
+### Order random
 
 `parralel_rspec --test-options '-r ./config_cloud.rb --order random'`
 
-####Rake Tasks
+### Rake Tasks
 
 Run a task
 `rake task name`
@@ -46,6 +46,9 @@ Specify parallel processes in an environment variable before the `rake` command
 
 Specify operating system
 `rake cloud:ie['Windows 7','9']`
+
+Specify tags
+`tag='depth:shallow' rake local:chrome`
 
 
 
