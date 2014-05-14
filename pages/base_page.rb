@@ -17,7 +17,7 @@ class BasePage
   end
 
   def select(locator, option)
-      @driver.find_elements(locator)[option].click
+    @driver.find_elements(locator)[option].click
   end
 
   def type(text, locator)
@@ -46,6 +46,12 @@ class BasePage
 
   def wait_for(seconds = 5)
     Selenium::WebDriver::Wait.new(timeout: seconds).until { yield }
+  end
+
+  def dropdown(locator)
+    dropdown = @driver.find_element locator
+    select_list = Selenium::WebDriver::Support::Select.new(dropdown)
+    select_list.select_by(:value, "3")
   end
 
   def current_url

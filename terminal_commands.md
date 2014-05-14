@@ -1,7 +1,7 @@
 ## Terminal Commands
 ======================
 
-#### Specify Browser
+### Specify Browser
 
 `browser='chrome' rspec -r ./config.rb`
 
